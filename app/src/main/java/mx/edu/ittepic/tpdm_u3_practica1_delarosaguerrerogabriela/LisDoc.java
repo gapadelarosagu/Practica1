@@ -66,6 +66,7 @@ public class LisDoc extends AppCompatActivity {
                                     Docentes u = dataSnapshot.getValue(Docentes.class);
 
                                     if(u!=null){
+                                        u.setId(snap.getKey());
                                         datos.add(u);
                                     }
                                     cargaDatos();
@@ -95,7 +96,12 @@ public class LisDoc extends AppCompatActivity {
                         .setPositiveButton("SI", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent i=new Intent(LisDoc.this,ModDoc.class);
+                                Intent i = new Intent(LisDoc.this, ModDoc.class);
+                                i.putExtra("id",datos.get(position).getId());
+                                i.putExtra("nombre",datos.get(position).getNombre());
+                                i.putExtra("apellido",datos.get(position).getApellido());
+                                i.putExtra("rfc",datos.get(position).getRfc());
+                                i.putExtra("tel",datos.get(position).getTelefono());
                                 startActivity(i);
                                 finish();
                             }

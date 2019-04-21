@@ -1,7 +1,7 @@
 package mx.edu.ittepic.tpdm_u3_practica1_delarosaguerrerogabriela;
 
 public class Docentes {
-    String rfc, nombre,apellido, telefono;
+    String rfc, nombre,apellido, telefono,id;
 
     public Docentes(String rfc, String nombre, String apellido, String telefono){
         this.rfc = rfc;
@@ -12,7 +12,8 @@ public class Docentes {
     public Docentes(){
 
     }
-
+    public void setId(String id){this.id=id;}
+    public String getId(){return id;}
     public String getRfc() {
         return rfc;
     }
