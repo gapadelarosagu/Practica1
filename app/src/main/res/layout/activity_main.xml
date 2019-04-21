@@ -46,14 +46,6 @@
         android:id="@+id/btninserta"
         android:layout_marginTop="40dp"
         android:textColor="#FFFFFF"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Regresar"
-        android:background="#258c35"
-        android:id="@+id/btnregresaralu"
-        android:layout_marginTop="10dp"
-        android:textColor="#FFFFFF"/>
 
 
 

@@ -77,7 +77,6 @@ public class LisAlu extends AppCompatActivity {
                                     Alumnos d = dataSnapshot.getValue(Alumnos.class);
 
                                     if (d != null) {
-                                        d.setId(snap.getKey());
                                         datosAlu.add(d);
                                     }
                                     cargaDatosA();
@@ -108,13 +107,6 @@ public class LisAlu extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent i = new Intent(LisAlu.this, ModAlu.class);
-                                i.putExtra("id",datosAlu.get(position).getId());
-                                i.putExtra("nombre",datosAlu.get(position).getNombre());
-                                i.putExtra("apellidos",datosAlu.get(position).getApellidos());
-                                i.putExtra("nc",datosAlu.get(position).getNc());
-                                i.putExtra("carrera",datosAlu.get(position).getCarrera());
-                                startActivity(i);
-                                finish();
 
                             }
                         })

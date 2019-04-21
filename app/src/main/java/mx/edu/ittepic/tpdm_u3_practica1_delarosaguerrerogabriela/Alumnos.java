@@ -1,7 +1,7 @@
 package mx.edu.ittepic.tpdm_u3_practica1_delarosaguerrerogabriela;
 
 public class Alumnos {
-    String nc, nombre, apellidos, carrera,id;
+    String nc, nombre, apellidos, carrera;
 
     public Alumnos(String nc, String nombre, String apellidos, String carrera){
         this.nc = nc;
@@ -13,8 +13,7 @@ public class Alumnos {
     public Alumnos(){
 
     }
-    public void setId(String id){this.id=id;}
-    public String getId(){return id;}
+
     public String getNc() {
         return nc;
     }
