@@ -1,5 +1,6 @@
 package mx.edu.ittepic.tpdm_u3_practica1_delarosaguerrerogabriela;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ import java.util.List;
 
 public class InsAlu extends AppCompatActivity {
     EditText nc_alu, nom_alu,ape_alu,carrera;
-    Button insertar;
+    Button insertar,regresar;
     DatabaseReference servicioRealtime;
 
 
@@ -37,7 +38,7 @@ public class InsAlu extends AppCompatActivity {
         nom_alu = findViewById(R.id.nom_alu);
         ape_alu = findViewById(R.id.ape_alu);
         carrera = findViewById(R.id.carrera);
-
+        regresar=findViewById(R.id.btnregresaralu);
 
         insertar = findViewById(R.id.btninserta);
 
@@ -54,6 +55,13 @@ public class InsAlu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 insertarAlu();
+            }
+        });
+        regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(InsAlu.this,LisAlu.class));
+                finish();
             }
         });
 
